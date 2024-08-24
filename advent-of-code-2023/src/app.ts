@@ -1,9 +1,8 @@
 import Fastify from "fastify";
 import day01 from "./solutions/day01.js";
+import day02 from "./solutions/day02.js";
 
-const fastify = Fastify({
-    // logger: true,
-});
+const fastify = Fastify();
 
 
 fastify.get('/', async (request, reply) => {
@@ -11,6 +10,7 @@ fastify.get('/', async (request, reply) => {
 })
 
 fastify.register(day01)
+fastify.register(day02)
 
 const start = async () => {
   try {
